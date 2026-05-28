@@ -194,10 +194,10 @@ body{
   text-shadow:0 0 12px rgba(232,184,109,0.6);
 }
 #p2 .l-body{
-  font-size:clamp(15px,2.3vw,17px);line-height:2.2;
+  font-size:clamp(15px,2.3vw,17.5px);line-height:1.8;
   color:#fff;text-align:left;
 }
-#p2 .l-body p{margin-bottom:4px;text-shadow:0 1px 3px rgba(0,0,0,0.8);}
+#p2 .l-body p{margin-bottom:18px;text-shadow:0 1px 3px rgba(0,0,0,0.85);}
 #p2 .l-body .her{
   color:#ffb3c6;font-style:italic;font-weight:700;
   text-shadow:0 0 15px rgba(255,179,198,0.7),0 1px 3px rgba(0,0,0,0.8);
@@ -428,7 +428,7 @@ body{
   <span class="s-rose">🌹</span>
   <div class="s-date">JUNE 7 &nbsp;·&nbsp; SOMETHING SPECIAL</div>
   <div class="s-name">Dear Seema,</div>
-  <p class="s-sub">Someone has been waiting a long time<br>to share something with you...</p>
+  <p class="s-sub">Someone has been waiting a long time<br>to share a special message with you...</p>
   <button id="splash-btn" onclick="splashEnter()">OPEN &nbsp;→</button>
 </div>
 
@@ -447,8 +447,8 @@ body{
   <div class="p1-for">A MESSAGE FOR</div>
   <div class="p1-title">Seema</div>
   <p class="p1-msg">
-    I've held this in my heart for so long.<br>
-    Today, on my birthday, I finally found the courage<br>to say it...
+    I have held this in my heart for a very long time.<br>
+    Today, on my birthday, I finally found the courage<br>to share it with you...
   </p>
   <div class="divider-roses">🌹 &nbsp; 🌹 &nbsp; 🌹</div>
   <button class="btn-open" onclick="goTo(2)">OPEN MY HEART &nbsp;→</button>
@@ -461,25 +461,24 @@ body{
   <div class="letter-box">
     <div class="l-from">FROM SAKTHIMANOJ &nbsp;·&nbsp; TO SEEMA &nbsp;·&nbsp; JUNE 7</div>
     <div class="l-body">
-      <p>My dearest <span class="her">Seema</span>,</p><br>
+      <p>My dearest <span class="her">Seema</span>,</p>
       <p>
-        Every single day, without fail, my thoughts find their way back to
-        <span class="her">you</span>. Your smile, the warmth in your eyes —
-        these are the moments I quietly treasure when no one is watching.
-      </p><br>
+        Every single day, my thoughts always find their way back to
+        <span class="her">you</span>. Your smile and the warmth in your eyes are
+        the moments I treasure the most.
+      </p>
       <p>
-        I have rehearsed this a thousand times in my head, but near you
-        every word disappears. So I am writing it down, on this day —
-        <span class="gold">my birthday, June 7</span> — because the only wish
-        I want to make is a wish that involves <span class="her">you, Seema</span>.
-      </p><br>
+        I have tried to tell you this so many times, but whenever I'm near you,
+        I lose my words. So I am writing it down today—on
+        <span class="gold">my birthday, June 7</span>—because my only wish
+        is to have <span class="her">you, Seema</span>, in my life.
+      </p>
       <p>
-        You may not know it, but you already mean
+        You might not know this, but you already mean
         <span class="glow">the world</span> to me.
-        And today, I, Sakthimanoj, finally found the courage
-        to tell you that.
-      </p><br>
-      <p>With everything that I am,</p>
+        And today, I finally found the courage to tell you that.
+      </p>
+      <p>With all my heart,</p>
     </div>
     <div class="l-sig">— Sakthimanoj 🌹</div>
   </div>
@@ -509,13 +508,13 @@ body{
   <div class="y-petals">🌹 &nbsp; 💫 &nbsp; 🌹</div>
   <div class="y-card">
     <div class="y-body">
-      <strong>Seema</strong>, you just made me the happiest person alive. 🥺<br><br>
-      On my birthday, you gave me the greatest gift —
-      <strong>yourself.</strong><br><br>
-      I, Sakthimanoj, promise to cherish every moment with you,
+      <strong>Seema</strong>, you have made me the happiest person alive! 🥺<br><br>
+      On my birthday, you gave me the best gift possible —
+      <strong>your love.</strong><br><br>
+      I promise to cherish every moment with you,
       stand by your side always, and love you more
-      with every single day. 🌹<br><br>
-      <strong>This is just the beginning of us. 💝</strong>
+      each and every day. 🌹<br><br>
+      <strong>This is just the beginning of our beautiful journey. 💝</strong>
     </div>
   </div>
   <div class="status-bar" id="status-yes">Notifying Sakthimanoj... 💌</div>
@@ -529,11 +528,9 @@ body{
   <div class="n-title">My heart is broken, Seema...</div>
   <div class="n-card">
     <div class="n-body">
-      I understand. Honesty takes courage,<br>and I deeply respect you for that.<br><br>
-      I hope one day you will see what Sakthimanoj feels —
-      something rare and truly real.<br><br>
-      Until then, I will keep smiling, because even
-      knowing you has been the greatest gift.
+      I understand, Seema. It takes courage to be honest,<br>and I deeply respect you for that.<br><br>
+      I hope that one day you can feel the love I have for you —<br>something true and real.<br><br>
+      Until then, I will keep smiling, because just<br>knowing you is a beautiful gift.
     </div>
   </div>
   <button class="btn-retry" onclick="goTo(3)">↩ &nbsp; LET ME RECONSIDER</button>
@@ -543,13 +540,13 @@ body{
 <!-- MUSIC BAR -->
 <div id="music-bar" style="display:none;">
   <span class="note">♫</span>
-  <span class="song-name">96 Theme</span>
+  <span class="song-name">Kadhal Rojave (Flute)</span>
   <button id="mBtn" onclick="toggleMusic()">⏸</button>
 </div>
 
 <script>
 /* ══ CONFIG ══════════════════════════════ */
-const YT_ID    = 'MynfiF7YtmM';
+const YT_ID    = '81aVjqObjd0';
 const WA_NUM   = '919790220706';
 const EMAIL    = 'maharajanshakthimanoj@gmail.com';
 
