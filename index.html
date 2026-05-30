@@ -402,17 +402,6 @@ body{
 }
 .btn-next:hover{background:rgba(200,49,79,0.25);border-color:rgba(200,49,79,0.7);}
 
-#yt-frame{
-  position:fixed;
-  bottom:0;
-  right:0;
-  width:200px;
-  height:200px;
-  z-index:-9999;
-  pointer-events:none;
-  opacity:0.001;
-}
-
 /* ════════════════════════════════════════
    KEYFRAMES
 ════════════════════════════════════════ */
@@ -426,7 +415,7 @@ body{
 </head>
 <body>
 
-<div id="yt-frame"></div>
+<audio id="bg-music" src="song.m4a" loop></audio>
 <div id="gradient-overlay"></div>
 <canvas id="bg-canvas"></canvas>
 
@@ -562,64 +551,46 @@ const YT_ID    = '81aVjqObjd0';
 const WA_NUM   = '919790220706';
 const EMAIL    = 'maharajanshakthimanoj@gmail.com';
 
-/* ══ YOUTUBE PLAYER ══════════════════════ */
-let player=null, pReady=false, playing=false, playRequested=false;
+/* ══ AUDIO PLAYER ════════════════════════ */
+let audio = null;
+let playing = false;
 
-window.onYouTubeIframeAPIReady = function(){
-  const originVar = (location.origin && location.origin !== 'null') ? location.origin : undefined;
-  const playerVars = {
-    autoplay: 1,
-    loop: 1,
-    playlist: YT_ID,
-    controls: 0,
-    mute: 0,
-    enablejsapi: 1
-  };
-  if(originVar) playerVars.origin = originVar;
-
-  player = new YT.Player('yt-frame',{
-    videoId: YT_ID,
-    playerVars: playerVars,
-    events:{
-      onReady(){
-        pReady=true;
-        if(playRequested){
-          playMusic();
-        }
-      },
-      onError(e){ console.error('YT error',e.data); }
-    }
-  });
-};
-(function(){
-  const s=document.createElement('script');
-  s.src='https://www.youtube.com/iframe_api';
-  document.head.appendChild(s);
-})();
+window.addEventListener('DOMContentLoaded', () => {
+  audio = document.getElementById('bg-music');
+  if (audio) {
+    audio.volume = 0.82;
+  }
+});
 
 function startMusic(){
-  playRequested=true;
-  if(pReady){
-    playMusic();
-  }
-}
-
-function playMusic(){
-  try{
-    player.unMute();
-    player.setVolume(82);
-    player.playVideo();
-    playing=true;
-    document.getElementById('mBtn').textContent='⏸';
-  }catch(e){
-    console.error('Error playing music', e);
+  if (!audio) audio = document.getElementById('bg-music');
+  if (audio) {
+    audio.play()
+      .then(() => {
+        playing = true;
+        document.getElementById('mBtn').textContent = '⏸';
+      })
+      .catch(e => {
+        console.error('Audio playback failed:', e);
+      });
   }
 }
 
 function toggleMusic(){
-  if(!player||!pReady) return;
-  if(playing){ player.pauseVideo(); document.getElementById('mBtn').textContent='▶'; playing=false; }
-  else        { player.playVideo();  document.getElementById('mBtn').textContent='⏸'; playing=true; }
+  if (!audio) audio = document.getElementById('bg-music');
+  if (!audio) return;
+  if (playing) {
+    audio.pause();
+    document.getElementById('mBtn').textContent = '▶';
+    playing = false;
+  } else {
+    audio.play()
+      .then(() => {
+        document.getElementById('mBtn').textContent = '⏸';
+        playing = true;
+      })
+      .catch(e => console.error(e));
+  }
 }
 
 /* ══ SPLASH ENTER ════════════════════════ */
