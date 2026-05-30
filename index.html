@@ -402,7 +402,16 @@ body{
 }
 .btn-next:hover{background:rgba(200,49,79,0.25);border-color:rgba(200,49,79,0.7);}
 
-#yt-frame{position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;opacity:0;}
+#yt-frame{
+  position:fixed;
+  bottom:0;
+  right:0;
+  width:200px;
+  height:200px;
+  z-index:-9999;
+  pointer-events:none;
+  opacity:0.001;
+}
 
 /* ════════════════════════════════════════
    KEYFRAMES
@@ -554,15 +563,31 @@ const WA_NUM   = '919790220706';
 const EMAIL    = 'maharajanshakthimanoj@gmail.com';
 
 /* ══ YOUTUBE PLAYER ══════════════════════ */
-let player=null, pReady=false, playing=false;
+let player=null, pReady=false, playing=false, playRequested=false;
 
 window.onYouTubeIframeAPIReady = function(){
+  const originVar = (location.origin && location.origin !== 'null') ? location.origin : undefined;
+  const playerVars = {
+    autoplay: 1,
+    loop: 1,
+    playlist: YT_ID,
+    controls: 0,
+    mute: 0,
+    enablejsapi: 1
+  };
+  if(originVar) playerVars.origin = originVar;
+
   player = new YT.Player('yt-frame',{
     videoId: YT_ID,
-    playerVars:{autoplay:0,loop:1,playlist:YT_ID,controls:0,mute:0,enablejsapi:1,origin:location.origin},
+    playerVars: playerVars,
     events:{
-      onReady(){ pReady=true; },
-      onError(e){ console.log('YT error',e.data); }
+      onReady(){
+        pReady=true;
+        if(playRequested){
+          playMusic();
+        }
+      },
+      onError(e){ console.error('YT error',e.data); }
     }
   });
 };
@@ -573,10 +598,22 @@ window.onYouTubeIframeAPIReady = function(){
 })();
 
 function startMusic(){
-  if(!pReady){ setTimeout(startMusic,250); return; }
-  try{ player.unMute(); player.setVolume(82); player.playVideo(); }catch(e){}
-  playing=true;
-  document.getElementById('mBtn').textContent='⏸';
+  playRequested=true;
+  if(pReady){
+    playMusic();
+  }
+}
+
+function playMusic(){
+  try{
+    player.unMute();
+    player.setVolume(82);
+    player.playVideo();
+    playing=true;
+    document.getElementById('mBtn').textContent='⏸';
+  }catch(e){
+    console.error('Error playing music', e);
+  }
 }
 
 function toggleMusic(){
