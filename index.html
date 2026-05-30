@@ -12,7 +12,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{
   width:100%;min-height:100vh;overflow-x:hidden;
-  font-family:'Playfair Display',Georgia,serif;
+  font-family:'Playfair Display',Georgia,serif;font-size:16px;
 }
 
 /* ════════════════════════════════════════
@@ -26,7 +26,7 @@ body{
     radial-gradient(ellipse at 50% 50%,  #3d0520 0%, transparent 65%),
     radial-gradient(ellipse at 20% 85%,  #5c0f2a 0%, transparent 50%),
     radial-gradient(ellipse at 80% 90%,  #2a0415 0%, transparent 50%),
-    linear-gradient(145deg, #1a0010 0%, #2d0518 30%, #1f0312 60%, #120008 100%);
+    linear-gradient(145deg, #280018 0%, #3d091f 30%, #2a0415 60%, #1a000e 100%);
   color:#fff;
 }
 
@@ -78,7 +78,7 @@ body{
 #splash .s-sub{
   font-size:clamp(14px,2.5vw,17px);
   font-style:italic;
-  color:rgba(255,210,220,0.9);
+  color:rgba(255,225,235,1);
   text-shadow:0 1px 4px rgba(0,0,0,0.9);
   max-width:300px;line-height:1.8;
 }
@@ -139,9 +139,9 @@ body{
 }
 #p1 .p1-msg{
   font-size:clamp(15px,2.5vw,19px);font-style:italic;
-  color:rgba(255,220,230,0.95);
+  color:rgba(255,230,238,1);
   margin:20px 0 46px;
-  text-shadow:0 1px 4px rgba(0,0,0,1),0 0 20px rgba(0,0,0,0.8);
+  text-shadow:0 1px 5px rgba(0,0,0,1),0 0 25px rgba(0,0,0,0.9);
   opacity:0;animation:fadeUp 1s 1s forwards;
   max-width:480px;line-height:1.7;
 }
@@ -169,7 +169,7 @@ body{
 /* ── PAGE 2 LETTER ── */
 #p2 .letter-box{
   max-width:620px;width:100%;
-  background:linear-gradient(145deg,rgba(60,5,25,0.85),rgba(30,0,15,0.92));
+  background:linear-gradient(145deg,rgba(75,10,35,0.92),rgba(45,5,22,0.96));
   border:1px solid rgba(200,49,79,0.35);
   border-radius:6px;
   padding:clamp(28px,5vw,54px) clamp(24px,5vw,52px);
@@ -194,10 +194,10 @@ body{
   text-shadow:0 0 12px rgba(232,184,109,0.6);
 }
 #p2 .l-body{
-  font-size:clamp(15px,2.3vw,17.5px);line-height:1.8;
-  color:#fff;text-align:left;
+  font-size:clamp(15px,2.3vw,17.5px);line-height:2.3;
+  color:#ffffff;text-align:left;font-weight:400;
 }
-#p2 .l-body p{margin-bottom:18px;text-shadow:0 1px 3px rgba(0,0,0,0.85);}
+#p2 .l-body p{margin-bottom:4px;text-shadow:0 1px 3px rgba(0,0,0,0.8);}
 #p2 .l-body .her{
   color:#ffb3c6;font-style:italic;font-weight:700;
   text-shadow:0 0 15px rgba(255,179,198,0.7),0 1px 3px rgba(0,0,0,0.8);
@@ -247,7 +247,7 @@ body{
 }
 #p3 .q-sub{
   font-size:clamp(14px,2.2vw,17px);font-style:italic;
-  color:rgba(255,210,220,0.9);margin-bottom:54px;
+  color:rgba(255,220,230,1);margin-bottom:54px;
   text-shadow:0 1px 4px rgba(0,0,0,1);
 }
 .choices{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;}
@@ -270,7 +270,7 @@ body{
   padding:20px 76px;
   background:rgba(255,255,255,0.06);
   border:1px solid rgba(255,255,255,0.2);
-  color:rgba(255,255,255,0.55);
+  color:rgba(255,255,255,0.75);
   font-family:'Cinzel',serif;
   font-size:clamp(15px,2.8vw,20px);letter-spacing:4px;
   cursor:pointer;border-radius:3px;transition:all 0.3s;
@@ -306,7 +306,7 @@ body{
 }
 #p4 .y-card{
   max-width:500px;width:100%;
-  background:linear-gradient(145deg,rgba(60,5,25,0.88),rgba(30,0,15,0.94));
+  background:linear-gradient(145deg,rgba(75,10,35,0.92),rgba(45,5,22,0.97));
   border:1px solid rgba(200,49,79,0.3);border-radius:6px;
   padding:clamp(22px,4vw,40px) clamp(20px,4vw,40px);
   margin:16px auto;
@@ -336,7 +336,7 @@ body{
 }
 #p5 .n-card{
   max-width:460px;width:100%;
-  background:linear-gradient(145deg,rgba(30,0,15,0.88),rgba(15,0,8,0.94));
+  background:linear-gradient(145deg,rgba(55,8,28,0.92),rgba(35,3,18,0.97));
   border:1px solid rgba(150,80,100,0.2);border-radius:6px;
   padding:clamp(20px,4vw,36px) clamp(18px,4vw,36px);
   margin:0 auto 28px;
@@ -344,7 +344,7 @@ body{
 }
 #p5 .n-body{
   font-size:clamp(13px,2.1vw,16px);font-style:italic;
-  color:rgba(255,200,215,0.88);line-height:1.95;
+  color:rgba(255,218,230,1);line-height:1.95;
   text-shadow:0 1px 3px rgba(0,0,0,0.8);
 }
 .btn-retry{
@@ -370,7 +370,7 @@ body{
   box-shadow:0 0 25px rgba(0,0,0,0.6),0 0 15px rgba(200,49,79,0.1);
 }
 #music-bar .note{color:#d63a5e;font-size:17px;animation:noteFloat 1.5s infinite;filter:drop-shadow(0 0 5px rgba(214,58,94,0.7));}
-#music-bar .song-name{color:rgba(255,210,220,0.8);font-style:italic;}
+#music-bar .song-name{color:rgba(255,225,232,0.95);font-style:italic;}
 #music-bar button{background:none;border:none;color:rgba(255,179,198,0.9);font-size:16px;cursor:pointer;transition:all 0.2s;}
 #music-bar button:hover{color:#fff;transform:scale(1.15);}
 
@@ -428,7 +428,7 @@ body{
   <span class="s-rose">🌹</span>
   <div class="s-date">JUNE 7 &nbsp;·&nbsp; SOMETHING SPECIAL</div>
   <div class="s-name">Dear Seema,</div>
-  <p class="s-sub">Someone has been waiting a long time<br>to share a special message with you...</p>
+  <p class="s-sub">Someone has been waiting a long time<br>to share something with you...</p>
   <button id="splash-btn" onclick="splashEnter()">OPEN &nbsp;→</button>
 </div>
 
@@ -447,8 +447,8 @@ body{
   <div class="p1-for">A MESSAGE FOR</div>
   <div class="p1-title">Seema</div>
   <p class="p1-msg">
-    I have held this in my heart for a very long time.<br>
-    Today, on my birthday, I finally found the courage<br>to share it with you...
+    I've held this in my heart for so long.<br>
+    Today, on my birthday, I finally found the courage<br>to say it...
   </p>
   <div class="divider-roses">🌹 &nbsp; 🌹 &nbsp; 🌹</div>
   <button class="btn-open" onclick="goTo(2)">OPEN MY HEART &nbsp;→</button>
@@ -461,24 +461,25 @@ body{
   <div class="letter-box">
     <div class="l-from">FROM SAKTHIMANOJ &nbsp;·&nbsp; TO SEEMA &nbsp;·&nbsp; JUNE 7</div>
     <div class="l-body">
-      <p>My dearest <span class="her">Seema</span>,</p>
+      <p>My dearest <span class="her">Seema</span>,</p><br>
       <p>
-        Every single day, my thoughts always find their way back to
-        <span class="her">you</span>. Your smile and the warmth in your eyes are
-        the moments I treasure the most.
-      </p>
+        Every single day, without fail, my thoughts find their way back to
+        <span class="her">you</span>. Your smile, the warmth in your eyes —
+        these are the moments I quietly treasure when no one is watching.
+      </p><br>
       <p>
-        I have tried to tell you this so many times, but whenever I'm near you,
-        I lose my words. So I am writing it down today—on
-        <span class="gold">my birthday, June 7</span>—because my only wish
-        is to have <span class="her">you, Seema</span>, in my life.
-      </p>
+        I have rehearsed this a thousand times in my head, but near you
+        every word disappears. So I am writing it down, on this day —
+        <span class="gold">my birthday, June 7</span> — because the only wish
+        I want to make is a wish that involves <span class="her">you, Seema</span>.
+      </p><br>
       <p>
-        You might not know this, but you already mean
+        You may not know it, but you already mean
         <span class="glow">the world</span> to me.
-        And today, I finally found the courage to tell you that.
-      </p>
-      <p>With all my heart,</p>
+        And today, I, Sakthimanoj, finally found the courage
+        to tell you that.
+      </p><br>
+      <p>With everything that I am,</p>
     </div>
     <div class="l-sig">— Sakthimanoj 🌹</div>
   </div>
@@ -508,13 +509,13 @@ body{
   <div class="y-petals">🌹 &nbsp; 💫 &nbsp; 🌹</div>
   <div class="y-card">
     <div class="y-body">
-      <strong>Seema</strong>, you have made me the happiest person alive! 🥺<br><br>
-      On my birthday, you gave me the best gift possible —
-      <strong>your love.</strong><br><br>
-      I promise to cherish every moment with you,
+      <strong>Seema</strong>, you just made me the happiest person alive. 🥺<br><br>
+      On my birthday, you gave me the greatest gift —
+      <strong>yourself.</strong><br><br>
+      I, Sakthimanoj, promise to cherish every moment with you,
       stand by your side always, and love you more
-      each and every day. 🌹<br><br>
-      <strong>This is just the beginning of our beautiful journey. 💝</strong>
+      with every single day. 🌹<br><br>
+      <strong>This is just the beginning of us. 💝</strong>
     </div>
   </div>
   <div class="status-bar" id="status-yes">Notifying Sakthimanoj... 💌</div>
@@ -528,9 +529,11 @@ body{
   <div class="n-title">My heart is broken, Seema...</div>
   <div class="n-card">
     <div class="n-body">
-      I understand, Seema. It takes courage to be honest,<br>and I deeply respect you for that.<br><br>
-      I hope that one day you can feel the love I have for you —<br>something true and real.<br><br>
-      Until then, I will keep smiling, because just<br>knowing you is a beautiful gift.
+      I understand. Honesty takes courage,<br>and I deeply respect you for that.<br><br>
+      I hope one day you will see what Sakthimanoj feels —
+      something rare and truly real.<br><br>
+      Until then, I will keep smiling, because even
+      knowing you has been the greatest gift.
     </div>
   </div>
   <button class="btn-retry" onclick="goTo(3)">↩ &nbsp; LET ME RECONSIDER</button>
@@ -540,7 +543,7 @@ body{
 <!-- MUSIC BAR -->
 <div id="music-bar" style="display:none;">
   <span class="note">♫</span>
-  <span class="song-name">Kadhal Rojave (Flute)</span>
+  <span class="song-name">Love Song 🎵</span>
   <button id="mBtn" onclick="toggleMusic()">⏸</button>
 </div>
 
@@ -551,32 +554,14 @@ const WA_NUM   = '919790220706';
 const EMAIL    = 'maharajanshakthimanoj@gmail.com';
 
 /* ══ YOUTUBE PLAYER ══════════════════════ */
-let player=null, pReady=false, playing=false, playRequested=false;
+let player=null, pReady=false, playing=false;
 
 window.onYouTubeIframeAPIReady = function(){
-  const originVar = (location.origin && location.origin !== 'null') ? location.origin : undefined;
-  const playerVars = {
-    autoplay: 0,
-    loop: 1,
-    playlist: YT_ID,
-    controls: 0,
-    mute: 0,
-    enablejsapi: 1
-  };
-  if(originVar) playerVars.origin = originVar;
-
   player = new YT.Player('yt-frame',{
     videoId: YT_ID,
-    playerVars: playerVars,
+    playerVars:{autoplay:0,loop:1,playlist:YT_ID,controls:0,mute:0,enablejsapi:1,origin:location.origin},
     events:{
-      onReady(){
-        pReady=true;
-        if(playRequested){
-          try{ player.unMute(); player.setVolume(82); player.playVideo(); }catch(e){}
-          playing=true;
-          document.getElementById('mBtn').textContent='⏸';
-        }
-      },
+      onReady(){ pReady=true; },
       onError(e){ console.log('YT error',e.data); }
     }
   });
@@ -588,12 +573,10 @@ window.onYouTubeIframeAPIReady = function(){
 })();
 
 function startMusic(){
-  playRequested=true;
-  if(pReady){
-    try{ player.unMute(); player.setVolume(82); player.playVideo(); }catch(e){}
-    playing=true;
-    document.getElementById('mBtn').textContent='⏸';
-  }
+  if(!pReady){ setTimeout(startMusic,250); return; }
+  try{ player.unMute(); player.setVolume(82); player.playVideo(); }catch(e){}
+  playing=true;
+  document.getElementById('mBtn').textContent='⏸';
 }
 
 function toggleMusic(){
