@@ -415,7 +415,10 @@ body{
 </head>
 <body>
 
-<audio id="bg-music" src="song.m4a" loop></audio>
+<audio id="bg-music" loop>
+  <source src="song.webm" type="audio/webm">
+  <source src="song.m4a" type="audio/mp4">
+</audio>
 <div id="gradient-overlay"></div>
 <canvas id="bg-canvas"></canvas>
 
